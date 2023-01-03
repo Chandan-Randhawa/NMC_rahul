@@ -16,8 +16,8 @@ def csv_to_json():
             csvReader = csv.DictReader(csvf)
             for rows in csvReader:
                 datas.append(rows)
-        print(datas[0:10])
-        return datas[0:10]
+        # print(datas)
+        return datas
     except Exception as e:
         print (e)
         raise HTTPException(status_code= 404 , detail='Internal server error')
